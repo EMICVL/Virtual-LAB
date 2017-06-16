@@ -1,4 +1,4 @@
 # BSU
-# Podcast - Staining of Bacterium
+# Podcast  
 
-[![Watch Demo Video Here](https://i.ytimg.com/vi_webp/O7V2lZdLHqc/sddefault.webp)](https://www.youtube.com/embed/O7V2lZdLHqc)
+[![Watch Podcast Video Here](https://img.youtube.com/vi/98_LY3ECEl0/0.jpg)](https://www.youtube.com/embed/98_LY3ECEl0)
