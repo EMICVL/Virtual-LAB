@@ -1,9 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ActionManager : MonoBehaviour {
-    public static GUIContent[] contents;
+public class ActionManager : MonoBehaviour
+{
+    public static bool Bool_0 { get; set; }
+    public static bool Bool_1 { get; set; }
+    public static bool Bool_2 { get; set; }
+    public static bool Bool_3 { get; set; }
+    public static bool Bool_4 { get; set; }
+    public static bool Bool_5 { get; set; }
+
+    public static bool AllLevelsCompleted
+    {
+        get
+        {
+            return Bool_0 &&
+                   Bool_1 &&
+                   Bool_2 &&
+                   Bool_3 &&
+                   Bool_4 &&
+                   Bool_5;
+        }
+    }
+
+    public static GUIContent[] contents { get; set; }
     public Texture BoxTexture;
     public Texture BoxTextureCompleted;
     public static ActionManager Instance { get; set; }
@@ -18,7 +37,7 @@ public class ActionManager : MonoBehaviour {
         style.normal.textColor = Color.green;
 
         contents = new GUIContent[7];
-      
+        
         var content0 = new GUIContent(@"Bacterial culture(suspension)", BoxTexture,
             "Remove a loopful of bacteria from tube");
         contents[0] = content0;
@@ -39,13 +58,13 @@ public class ActionManager : MonoBehaviour {
             "96% ethyl alcohol for 30 seconds.");
         contents[4] = content4;
 
-        var content5 = new GUIContent(@"Cover the smear with fuksin", BoxTexture,
-            "  Cover the smear with fuksin(or safranin) solution for 30     seconds.Pour off fuksinsolution from smear and wash\n\n        gently with distilled water for 2-3 seconds.\n\n        Drythe smear with bibulous paper.");
-        contents[5] = content5;
+        //var content5 = new GUIContent(@"Cover the smear with fuksin", BoxTexture,
+        //    "  Cover the smear with fuksin(or safranin) solution for 30     seconds.Pour off fuksinsolution from smear and wash\n\n        gently with distilled water for 2-3 seconds.\n\n        Drythe smear with bibulous paper.");
+        //contents[5] = content5;
 
-        var content6 = new GUIContent(@"Put a drop of immersion oiln", BoxTexture,
+        var content6 = new GUIContent(@"Put a drop of immersion oil", BoxTexture,
             @" Put a drop of immersion oil on thesmear and examine the smear under immersion objective");
-        contents[6] = content6;
+        contents[5] = content6;
     }
     
     public static int BoxWidth = 250;
@@ -53,11 +72,14 @@ public class ActionManager : MonoBehaviour {
 	public void OnGUI()
     {
         //GUI.Box(new Rect(0, 0, BoxWidth, BoxHeight), "This is a box");
-        int h = 0;
-        foreach (var content in contents)
+        if (!CustomBehavior.ShowFirstMenu&&!AllLevelsCompleted)
         {
-            GUI.Box(new Rect(0, h, BoxWidth, BoxHeight), content, style);
-            h += BoxHeight;
+            int h = 0;
+            foreach (var content in contents)
+            {
+                GUI.Box(new Rect(0, h, BoxWidth, BoxHeight), content, style);
+                h += BoxHeight;
+            }
         }
     }
 	// Update is called once per frame

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CustomBehavior : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class CustomBehavior : MonoBehaviour
     public float AreaHeight=200f;
     private bool SecondMenuShown = false;
 
+    public Texture2D NormalBackgroundOfButtonStart;
     //public bool CreateButton(string text)
     //{
     //    return GUILayout.Button(text, GUILayout.Width(ButtonWidth), GUILayout.Height(ButtonHeight));
@@ -82,6 +84,7 @@ public class CustomBehavior : MonoBehaviour
         }
         if (ShowFirstMenu)
         {
+#if false
             GUILayout.BeginArea(_firstMenuOnLoad);
             GUILayout.BeginVertical();
 
@@ -96,6 +99,25 @@ public class CustomBehavior : MonoBehaviour
             }
             GUILayout.EndVertical();
             GUILayout.EndArea();
+#endif
+           var centeredStyle2= GUI.skin.GetStyle("Button");
+           // centeredStyle2.normal.background= NormalBackgroundOfButtonStart;
+            //centeredStyle2.hover.background= NormalBackgroundOfButtonStart;
+           // centeredStyle2.onHover.background= NormalBackgroundOfButtonStart;
+           centeredStyle2.normal.textColor=Color.green;
+           centeredStyle2.fontSize=25;
+           // Graphics.Blit(NormalBackgroundOfButtonStart, null as RenderTexture);
+            if (GUI.Button(new Rect(Screen.width / 2 - 50, -50+Screen.height / 2 + 10, 100, 50), "Start", centeredStyle2))
+            {
+                ShowFirstMenu = false;
+                //var player = GameObject.FindGameObjectsWithTag("Player")[0];
+                //player.GetComponent<RigidbodyFirstPersonController>().mouseLook.lockCursor= true;
+            }
+            //GUILayout.Space(SpacingBetweenButtons);
+            if (GUI.Button(new Rect(Screen.width / 2 - 50, 50+Screen.height / 2 + 10, 100, 50), "Exit", centeredStyle2))
+            {
+                Application.Quit();
+            }
         }
         if (ShowSecondMenu)
         {
@@ -112,6 +134,7 @@ public class CustomBehavior : MonoBehaviour
             GUILayout.EndVertical();
             GUILayout.EndArea();
         }
+        OnGUIGeneral();
     }
     public void DoAfterNSeconds(float duration, Metod metod)
     {
@@ -123,5 +146,31 @@ public class CustomBehavior : MonoBehaviour
         Metod metod = (Metod)param[1];
         yield return new WaitForSeconds(duration);   //Wait
         metod();
+    }
+
+    void OnGUIGeneral()
+    {
+        var centeredStyle2 = GUI.skin.GetStyle("Button");
+        // centeredStyle2.normal.background= NormalBackgroundOfButtonStart;
+        //centeredStyle2.hover.background= NormalBackgroundOfButtonStart;
+        // centeredStyle2.onHover.background= NormalBackgroundOfButtonStart;
+        centeredStyle2.normal.textColor = Color.green;
+        centeredStyle2.fontSize = 25;
+
+         if(
+            ActionManager.AllLevelsCompleted
+            )
+            if (GUI.Button(new Rect(Screen.width / 2 - 50, -50 + Screen.height / 2 + 10, 100, 50), "Re Start",
+                centeredStyle2))
+            {
+                ActionManager.Bool_0 = false;
+                ActionManager.Bool_1 = false;
+                ActionManager.Bool_2 = false;
+                ActionManager.Bool_3 = false;
+                ActionManager.Bool_4 = false;
+                ActionManager.Bool_5 = false;
+                ShowFirstMenu = true;
+                SceneManager.LoadScene("EsasScene");
+            }
     }
 }

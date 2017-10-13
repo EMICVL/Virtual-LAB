@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DragByMouse : MonoBehaviour {
+
+	 private float dist;
+     private Vector3 v3Offset;
+     private Plane plane;
+     
+     void OnMouseDown() {
+		 Debug.Log("OnMouseDown");
+         plane.SetNormalAndPosition(Camera.main.transform.forward, transform.position);
+         Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+         float dist;
+         plane.Raycast (ray, out dist);
+         v3Offset = transform.position - ray.GetPoint (dist);         
+     }
+     
+     void OnMouseDrag() {
+		  Debug.Log("OnMouseDrag");
+          Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+          float dist;
+          plane.Raycast (ray, out dist);
+          Vector3 v3Pos = ray.GetPoint (dist);
+          transform.position = v3Pos + v3Offset;    
+     }
+}

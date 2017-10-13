@@ -22,7 +22,7 @@ public class CustomCursor : MonoBehaviour
         IsMouseDown = Input.GetMouseButton(0);
         if (IsMouseDown)
         {
-            Debug.Log("Kliklendi:" + this.name);
+            //Debug.Log("Kliklendi:" + this.name);
         }
         if (IsOnMouseEnter) FirlanmaniYoxla();
         if (IsOnMouseEnter)
@@ -39,10 +39,7 @@ public class CustomCursor : MonoBehaviour
             //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation |
               //                                           RigidbodyConstraints.FreezePosition;
         }
-        if (Input.GetMouseButtonDown(1)&&tag=="DistilledWater")
-        {
-            ActionManager.contents[id++].image = ActionManager.Instance.BoxTextureCompleted;
-        }
+        
     }
 
     public static int id = 0;
@@ -87,8 +84,8 @@ public class CustomCursor : MonoBehaviour
         if (CustomBehavior.ShowFirstMenu) return;
         IsOnMouseEnter = true;
             
-        Debug.Log("OnMouseEnter");
-        Debug.Log("tag='"+tag);
+        //Debug.Log("OnMouseEnter");
+        //Debug.Log("tag='"+tag);
         if (tag== "DistilledWater")
         {
         }
@@ -100,7 +97,7 @@ public class CustomCursor : MonoBehaviour
     {
         if (CustomBehavior.ShowFirstMenu) return;
         IsOnMouseEnter = false;
-        Debug.Log("OnMouseExit");
+        //Debug.Log("OnMouseExit");
         // when we mouse off this object restore the default cursor (passing null)
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
         //this.GetComponent<Rigidbody>().velocity = Vector3.zero;

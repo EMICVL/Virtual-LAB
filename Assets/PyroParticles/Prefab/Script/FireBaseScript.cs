@@ -82,7 +82,7 @@ namespace DigitalRuby.PyroParticles
             //Debug.LogError(fireLayer);
             try
             {
-                Physics.IgnoreLayerCollision(fireLayer, fireLayer);
+               // Physics.IgnoreLayerCollision(fireLayer, fireLayer);
             }
             catch (Exception e)
             {

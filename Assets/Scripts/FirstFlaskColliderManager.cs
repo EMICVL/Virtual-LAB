@@ -13,4 +13,17 @@ public class FirstFlaskColliderManager : MonoBehaviour {
 	void Update () {
 		
 	}
+    void OnCollisionEnter(Collision collision)
+    {
+        //Destroy(collision.gameObject);
+        //Debug.Log("OnCollisionEnter:"+collision.gameObject.name);
+        //foreach (ContactPoint contact in collision.contacts)
+        //{
+        //    Debug.DrawRay(contact.point, contact.normal, Color.red);
+        //}
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        //Destroy(other.gameObject);
+    }
 }

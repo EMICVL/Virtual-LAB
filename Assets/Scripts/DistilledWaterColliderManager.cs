@@ -13,12 +13,14 @@ public class DistilledWaterColliderManager : MonoBehaviour {
 	void Update () {
 		
 	}
-    void OnCollisionEnter(Collision col)
+    void OnCollisionStay(Collision col)
     {
         Debug.Log("OnCollisionEnter:" + col.collider.name + " | " + col.gameObject.name);
         if (col.gameObject.name== "First Flask")
         {
-            Debug.LogError("OnCollisionEnter");
+            //Debug.LogError("OnCollisionEnter");
+            ActionManager.Bool_0 = true;
+            ActionManager.contents[0].image = ActionManager.Instance.BoxTextureCompleted;
         }
 
     }
