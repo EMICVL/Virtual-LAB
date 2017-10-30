@@ -65,3 +65,6 @@ E:\Project BSU\Temp\bin\Debug\UnityEngine.HoloLens.xml
 E:\Project BSU\Temp\bin\Debug\UnityEngine.VR.xml
 E:\Project BSU\obj\Debug\Assembly-CSharp-firstpass.dll
 E:\Project BSU\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-firstpass.pdb

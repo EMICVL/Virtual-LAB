@@ -1,8 +1,8 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.CrossPlatformInput
+namespace Assets.Standard_Assets.CrossPlatformInput.Scripts
 {
 	public class Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 	{
@@ -19,7 +19,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		public string horizontalAxisName = "Horizontal"; // The name given to the horizontal axis for the cross platform input
 		public string verticalAxisName = "Vertical"; // The name given to the vertical axis for the cross platform input
 
-		Vector3 m_StartPos;
+		public Vector3 m_StartPos;
 		bool m_UseX; // Toggle for using the x axis
 		bool m_UseY; // Toggle for using the Y axis
 		CrossPlatformInputManager.VirtualAxis m_HorizontalVirtualAxis; // Reference to the joystick in the cross platform input
@@ -49,6 +49,17 @@ namespace UnityStandardAssets.CrossPlatformInput
 			{
 				m_VerticalVirtualAxis.Update(delta.y);
 			}
+            var player = GameObject.Find("Player");//;
+            //var tmp = Camera.main.transform.eulerAngles;
+            var x= player.transform.eulerAngles.x;
+            var y= player.transform.eulerAngles.y;
+            var z= player.transform.eulerAngles.z;
+		    x += 10;//Mathf.Sign(value.x);
+		    //player.transform.eulerAngles = new Vector3(x, y, z);
+		    //tmp.z += value.z;
+		    //tmp.y += value.y;
+
+		    //player.eulerAngles = player;
 		}
 
 		void CreateVirtualAxes()

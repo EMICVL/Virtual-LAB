@@ -1,11 +1,9 @@
 ﻿
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
-using UnityEngine;
 using System.IO;
 using System.Text;
- 
+using UnityEngine;
+
 public class ObjExporterScript
 {
 	private static int StartIndex = 0;

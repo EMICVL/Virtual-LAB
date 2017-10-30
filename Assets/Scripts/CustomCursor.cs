@@ -25,7 +25,7 @@ public class CustomCursor : MonoBehaviour
             //Debug.Log("Kliklendi:" + this.name);
         }
         if (IsOnMouseEnter) FirlanmaniYoxla();
-        if (IsOnMouseEnter)
+        //if (IsOnMouseEnter)
         {
             Cursor.SetCursor(!IsMouseDown ? TextureNormal : TexturePressed, hotSpot, cursorMode);
               
@@ -81,7 +81,6 @@ public class CustomCursor : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (CustomBehavior.ShowFirstMenu) return;
         IsOnMouseEnter = true;
             
         //Debug.Log("OnMouseEnter");
@@ -95,7 +94,6 @@ public class CustomCursor : MonoBehaviour
 
     void OnMouseExit()
     {
-        if (CustomBehavior.ShowFirstMenu) return;
         IsOnMouseEnter = false;
         //Debug.Log("OnMouseExit");
         // when we mouse off this object restore the default cursor (passing null)
@@ -107,7 +105,6 @@ public class CustomCursor : MonoBehaviour
     public Texture myBoxTexture;
     void OnGUI()
     {
-        if (CustomBehavior.ShowFirstMenu) return;
         if (!IsOnMouseEnter) return;
         var word = "";
         if (!IsMouseDown)

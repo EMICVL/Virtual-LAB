@@ -132,3 +132,6 @@ E:\Project BSU\Temp\bin\Debug\UnityEngine.VR.xml
 E:\Project BSU\obj\Debug\Assembly-CSharp-Editor.csprojResolveAssemblyReference.cache
 E:\Project BSU\obj\Debug\Assembly-CSharp-Editor.dll
 E:\Project BSU\obj\Debug\Assembly-CSharp-Editor.pdb
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-Editor.csprojResolveAssemblyReference.cache
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-Editor.dll
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-Editor.pdb

@@ -128,3 +128,6 @@ E:\Project BSU\Temp\bin\Debug\UnityEngine.VR.xml
 E:\Project BSU\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache
 E:\Project BSU\obj\Debug\Assembly-CSharp-Editor-firstpass.dll
 E:\Project BSU\obj\Debug\Assembly-CSharp-Editor-firstpass.pdb
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-Editor-firstpass.dll
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp-Editor-firstpass.pdb

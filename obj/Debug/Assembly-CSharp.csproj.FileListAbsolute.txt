@@ -68,3 +68,6 @@ E:\Project BSU\Temp\bin\Debug\UnityEngine.VR.xml
 E:\Project BSU\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 E:\Project BSU\obj\Debug\Assembly-CSharp.dll
 E:\Project BSU\obj\Debug\Assembly-CSharp.pdb
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp.dll
+C:\Users\mathm\Documents\GitHub\Virtual-LAB\obj\Debug\Assembly-CSharp.pdb

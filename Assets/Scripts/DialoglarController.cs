@@ -20,7 +20,6 @@ public class DialoglarController : CustomBehavior
     void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ShowFirstMenu = true;
         }
     }
     //void Menu33(int i)
